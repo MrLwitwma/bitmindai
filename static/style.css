@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+body{
+    margin: 0;
+    background: #000;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 30px;
+}
+header h1{
+    font-size: 24px;
+}
+
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+header button{
+    background: #D9D9D9;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+main{
+    width: 85%;
+    margin: auto;
+    max-width: 800px;
+}
+main section{
+    margin-bottom: 100px;
+}
+main section h2{
+    text-decoration: underline;
+}
+main section img{
+    width: 100%;
+}
+main section a{
+    text-decoration: underline;
+}
+
+
+.container *{
+    margin: 0px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #D9D9D9;
+    border-radius: 20px;
+    color: black;
+    font-weight: 900;
+    padding: 20px;
+}
+
+.searchBox{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.searchBox input{
+    width: 80%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: #7D7D7D;
+    color: white;
+    padding: 8px;
+}
+.searchBox input::placeholder{
+    color: white;
+    opacity: 0.6;
+}
+.searchBox button{
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background: #404040;
+    color: whitesmoke;
+    padding: 10px;
+}
+.searchBox button:hover{
+    background: #2f2f2f;
+}
+.searchBox button:active{
+    scale: 0.9;
+}
+
+
+.projects{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.projects::-webkit-scrollbar{
+    background: white;
+    height: 8px;
+    border-radius: 20px;
+}
+.projects::-webkit-scrollbar-thumb{
+    background: #404040;
+    border-radius: 20px;
+}
+.projects .project{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.projects .project img{
+    height: 200px;
+    width: 200px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+
+.newsnblogs{
+    display: flex;
+    flex-direction: column;
+}
+.newsnblogs .item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+.newsnblogs .item img{
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+}
+.newsnblogs .item .description{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+
+
+footer{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    background: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    padding: 50px 0px;
+}
+footer .bottom{
+    max-width: 800px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .footerContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+footer .content{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}

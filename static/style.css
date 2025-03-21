@@ -121,7 +121,7 @@ header button{
 main{
     width: calc(100% - 250px);
     margin: auto;
-    margin-top: 50px;
+    margin-top: 70px;
     max-width: 1200px;
     display: flex;
     flex-direction: column;

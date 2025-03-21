@@ -1,24 +1,4 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-    const inputText = document.getElementById('word');
-    const sendBtn = document.getElementById('send');
-
-    sendBtn.addEventListener('click', ()=>{
-        sendWord()
-    })
-    inputText.addEventListener('keydown', (e)=>{
-        if (e.key === 'Enter'){
-            sendWord()
-        }
-    })
-
-    function sendWord(){
-        word = inputText.value
-        if (word.trim() != ''){
-            window.open(`https://dictionary.bitmindai.in?word=${word}`, "_blank");
-        } 
-    }
-
-
     const navButton = document.getElementById('icon');
     const navBar = document.getElementById('nav');
     // let isClickable = true;
@@ -46,7 +26,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     function handleResize() {
         if (window.innerWidth <= 1000) {
-            navButton.setAttribute('src', 'static/pane-open.svg')
+            navButton.setAttribute('src', '/static/pane-open.svg')
             navBar.style.display = 'none'
         }
     }
@@ -55,6 +35,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
     handleResize();
     // Run on window resize
     window.addEventListener('resize', handleResize);
-    
-
 })

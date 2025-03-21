@@ -1,0 +1,17 @@
+main h2, h3{
+    line-height: 0px;
+}
+main a{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    transition: all 0.3s;
+    margin-top: 50px;
+    cursor: pointer;
+}
+main a:hover{
+    border: 1px solid white;
+}
+main a:hover h5{
+    text-decoration: underline;
+}

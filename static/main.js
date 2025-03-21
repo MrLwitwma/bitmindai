@@ -36,3 +36,66 @@ document.addEventListener('DOMContentLoaded', ()=>{
     // Run on window resize
     window.addEventListener('resize', handleResize);
 })
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let links = document.querySelectorAll("a");
+    let contents = {};
+
+    async function fetchHTML(url) {
+        try {
+            let response = await fetch(url);
+            return await response.text();
+        } catch (err) {
+            console.error("Error fetching page:", err);
+            return null;
+        }
+    }
+
+    links.forEach(link => {
+        let href = link.getAttribute("href");
+
+        if (href && (href.startsWith(location.origin) || href.startsWith("/"))) {
+            let resolvedPath = new URL(href, location.origin).pathname;
+            
+            if (resolvedPath.startsWith("/")) {
+                let hoverTimeout;
+
+                link.addEventListener("mouseenter", function () {
+                    hoverTimeout = setTimeout(() => {
+                        if (!contents[resolvedPath]) {
+                            fetchHTML(resolvedPath).then(htmlContent => {
+                                if (htmlContent) {
+                                    contents[resolvedPath] = htmlContent;
+                                }
+                            });
+                        }
+                    }, 200);
+                });
+
+                link.addEventListener("mouseleave", function () {
+                    clearTimeout(hoverTimeout);
+                });
+
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    if (contents[resolvedPath]) {
+                        document.body.innerHTML = new DOMParser().parseFromString(contents[resolvedPath], "text/html").body.innerHTML;
+                        history.pushState(null, "", resolvedPath);
+                    } else {
+                        location.href = resolvedPath; // Fallback if not prefetched
+                    }
+                });
+            }
+        }
+    });
+
+    window.addEventListener("popstate", function () {
+        let currentPath = location.pathname;
+        if (contents[currentPath]) {
+            document.body.innerHTML = new DOMParser().parseFromString(contents[currentPath], "text/html").body.innerHTML;
+        } else {
+            location.reload();
+        }
+    });
+});

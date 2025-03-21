@@ -1,7 +1,7 @@
-main h2, h3{
+main h2, h5{
     line-height: 0px;
 }
-main a{
+main > a{
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid grey;
@@ -9,9 +9,29 @@ main a{
     margin-top: 50px;
     cursor: pointer;
 }
-main a:hover{
+main > a:hover{
     border: 1px solid white;
 }
-main a:hover h5{
+main > a:hover h5{
     text-decoration: underline;
+}
+
+
+
+article{
+    color: rgb(240, 240, 240);
+    padding: 10px;
+    border-radius: 10px;
+}
+.blog-body p{
+    text-indent: 2em
+}
+.blog-body h4{
+    margin: 0;
+}
+.blog-body a{
+    text-decoration: underline;
+}
+.blog-body a:hover{
+    text-decoration: underline 2px;
 }

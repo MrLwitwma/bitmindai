@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8723574140909017"
+    crossorigin="anonymous"></script>
+
+       <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFGYBWPKZW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-LFGYBWPKZW');
+    </script>
+
+    <title>BitMindAI | Blogs | BitQ</title>
+    <link rel="stylesheet" href="/static/blogs/style.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/main.js"></script>
+</head>
+<body>
+    <header>
+        <img id="icon" src="/static/pane-close.svg" alt="">
+        <a href="/"><h1>BitMindAI</h1></a>
+        <div>
+            <a href="https://platform.bitmindai.in" target="_blank">APIs</a>
+            <a href="#" onclick="window.alert(`Sorry we don't have this feature yet`)">
+                <button>Sign Up</button>
+            </a>
+        </div>
+    </header>
+
+
+    <nav id="nav">
+        <div class="items">
+            <a href="/research">Research</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/projects">Projects</a>
+            <a href="https://platform.bitmindai.in" target="_blank">API</a>
+            <a href="/team">Our Team</a>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="blog-post">
+            <div class="blog-header">
+                <h2>BitQ</h2>
+                <h5>21 Mar 2025 | MrLwitwma</h5>
+            </div>
+            <div class="blog-body">
+                <h4>Introduction to BitQ</h4>
+                <p>
+                    BitQ is an online survey model questions serving software service.
+                    BitQ, Bit stands for the BitMindAI and Q for Questions.
+                    It is made for teachers, students, and anyone who wants to create or take a survey.
+                    It can be used as a quick test for student made by teachers.
+                    Users are allowed to create, delete and edit surveys of their own which can be shared and responded by other users.
+                </p>
+                <h4>How to Get Started with BitQ</h4>
+                <p>
+                    You can get started with BitQ by visiting our website <a href="https://bitq.bitmindai.in">bitq.bitmindai.in</a>
+                </p>
+                <h4>Is BitQ Free?</h4>
+                <p>
+                    Yes! It is free to use and you are allowed to create some good amount of questions.
+                    After creation of a question you will be provided with a special id and a link which can be shared and can be solved by other users.
+                    Although the paid version offers a better experience and more editing freedom, the free version is sufficient for everyday or non-business users.
+                </p>
+                <h4>Does it allow anonymous surveys?</h4>
+                <p>
+                    Yes! it allows anonymous surveys for both people who give the survey and create the survey.
+                    Users can also create surveys which stores users details, like who gave the survey.
+                    By default the survey creator and the survey giver are both anonymous.
+                </p>
+                <h4>Can BitQ be used for business purposes?</h4>
+                <p>
+                    Yes! BitQ can be used for business purposes.
+                    BitQ allows API integration, allowing business to make create, edit, delete questions externally without using our website UI.
+                    BitQ will store and manage all the data, allowing businesses to focus on more important tasks.
+                </p>
+                <h4>Can surveys have a time limit?</h4>
+                <p>
+                    Yes, surveys can be given time limit. 
+                    By default, this feature is turned off. 
+                    To ensure fairness, the time limit can be set between 5 seconds and 10,000 seconds per question.
+                    If the question are not responded by the frontend in the given time like 5sec, it waits for an addititional 3sec, if not responded the answer is set to False (wrong, if its a test) and it jumps to the next question.
+                </p>
+                <h4>Will slow internet affect my survey?</h4>
+                <p>
+                    Our APIs needs to transfer data of only 1-3KB of data so in most cases slow internet won't affect your experience much.
+                    Also in addition to it out server allows additional 5second (unmodifiable) time for transfer-response protocol.
+                    Examaple if the survey time is 5sec the API is given 10sec total time to get, display and fetch the data back to the server.
+                    It depends on the way you create the frontend, if the frontend is not properly made, the user might be able to take the survey for more the 5sec. <br>
+                    BitQ’s API is optimized to work efficiently even with slow internet, ensuring minimal delays. However, proper frontend implementation is necessary to maintain time limits and prevent users from exceeding the allotted duration.
+                </p>
+                <h4>Can users export survey results?</h4>
+                <p>
+                    Yes, users who created the server can extract the survey result as how many have attended the survey, how many people choose which options and other datas.
+                    It allows data extraction in three formats csv, json or plaintext. 
+                </p>
+            </div>
+            <div class="blog-footer">
+
+            </div>
+        </article>             
+
+        <footer>
+            <div class="bottom">
+                <div class="footerContent">
+                    <div class="content">
+                        <h4>Contacts</h4>
+                        <p>@mrlwitwma</p>
+                        <p>mrlwitwmabusiness@gmail.com</p>
+                    </div>
+
+                    <div class="content">
+                        <h4>Polices</h4>
+                        <p>Privacy Policy</p>
+                        <p>Terms of Service</p>
+                    </div>
+
+                    <div class="content">
+                        <h4>Company</h4>
+                        <p>About Us</p>
+                        <p>Our Team</p>
+                        <p>Apply for Company</p>
+                    </div>
+                </div>
+                <span>©BitMindAI 2025</span>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

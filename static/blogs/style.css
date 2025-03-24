@@ -35,3 +35,21 @@ article{
 .blog-body a:hover{
     text-decoration: underline 2px;
 }
+
+
+.codeBox{
+    background: #2b2b2b;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    font-family: monospace;
+    overflow-x: auto;
+}
+.codeBox::-webkit-scrollbar{
+    height: 8px;
+}
+code{
+    white-space: pre-wrap;
+    white-space: pre;  /* Preserves spaces and line breaks */
+    word-wrap: normal;  /* Prevents breaking unless necessary */
+}

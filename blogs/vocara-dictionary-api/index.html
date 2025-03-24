@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8723574140909017"
+    crossorigin="anonymous"></script>
+
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFGYBWPKZW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-LFGYBWPKZW');
+    </script>
+
+    <title>BitMindAI | Blogs | Vocara Dictionary API</title>
+    <link rel="stylesheet" href="/static/blogs/style.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/main.js"></script>
+</head>
+<body>
+    <header>
+        <a href="/"><h1>BitMindAI</h1></a>
+        <img id="icon" src="/static/pane-close.svg" alt="Open menu" tabindex="0" role="button" style="cursor: pointer;">
+        <div>
+            <a href="https://platform.bitmindai.in" target="_blank">APIs</a>
+            <a href="#" id="signinBtn">
+                <button>Sign Up</button>
+            </a>
+        </div>
+    </header>
+
+
+    <nav id="nav">
+        <div class="items">
+            <a href="/research">Research</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/projects">Projects</a>
+            <a href="https://platform.bitmindai.in" target="_blank">API</a>
+            <a href="/team">Our Team</a>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="blog-post">
+            <div class="blog-header">
+                <h2>Vocara Dictionary</h2>
+                <h5>25 Mar 2025 | MrLwitwma</h5>
+            </div>
+            <div class="blog-body">
+                <h4>What is an API?</h4>
+                <p>
+                    Just for quick information, an API key is a digital key (which are just some random numbers, letters and symbols) which helps programers to get data from a pre-existing program without actually creating the program for getting that data. Example Map API (provides developers with maps without the developer explicitely making their own map)
+                </p>
+                <h4>Follow this Steps to create an API key:</h4>
+                <ul>
+                    <li>Go to <a href="https://dictionary.bitmindai.in" target="_blank">dictionary.bitmindai.in</a></li>
+                    <li>Then find API at the top right header, then click it</li>
+                    <li>Provide your email address</li>
+                    <li>Get the api key then click how to use, you will get a js code then use it.</li>
+                </ul>
+                <p>So this was the straight forward explaination of how to create and use our API key.</p>
+
+                <h4>Steps Explaination in details:</h4>
+                <p>
+                    <b>Creation of an API: </b>
+                    For Creating an API you would need to go to the site <a href="https://dictionary.bitmindai.in" target="_blank">dictionary.bitmindai.in</a>. 
+                    Then find a link with "API" written on it, located at the top left of the header bar.
+                    <br>
+                    Then you will be redirected to <a href="https://platform.bitmindai.in" target="_blank">platform.bitmindai.in</a>, 
+                    then enter your email address and click "Generate API Key"
+                    Then you will be provided with an API key, copy the API key and keep it safe as you can't get back your API key once generated.
+                </p>
+                <p>
+                    <b>Using the API Key:</b> 
+                    After generating API key click "How to use" button on clicking it you will get to know all the codes and the routes where and how the data should be fetched.
+                    
+                    <br>
+                    Paste one of the following js to your html file.
+                    <div class="codeBox">
+                        <code>&lt;script src="https://platform.bitmindai.in/static/api.js">&lt;/script></code>
+                    </div>
+                    <br>
+                    <div class="codeBox">
+                        <code>
+&lt;script>
+    function loadScript(src, callback) {
+        const script = document.createElement("script");
+        script.src = src;
+        script.onload = callback;
+        document.head.appendChild(script);
+    }
+
+    loadScript("https://platform.bitmindai.in/static/api.js", async function () {
+        const apiKey = "YOUR_API_KEY_HERE"; // Replace with your actual API key
+        const word = "example";  
+    
+        try {
+            const suggestions = await matchWord(word, apiKey);
+            console.log("Suggestions:", suggestions);
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    });
+&lt;/script>
+                        </code>
+                    </div>
+                    The linked js has two functions one is matchWord() and other is getWord().
+                    <br>
+                    Both the functions takes in two parameter, first is the word and then the other is the API key.
+                    <br>
+                    Exmaple: matchWord("ap", "thisisanexmpleapikey")
+                    Here in response you will get 3 words form the datas.
+                </p>
+                <h4>Deeper into the data response and how to set up the frontend for this datas.</h4>
+                <p>
+                    Using the getWord() function you can get the following data:
+                    <br>
+                    The backend returns:
+                    <div class="codeBox"><code>jsonify({"word": word, "data": word_data})</code></div>
+                    <br>
+
+                    An Example of the response json
+                    <div class="codeBox">
+                        <code>
+{
+    "word": "example",
+    "data": {
+        "bird": {
+            "noun": {
+                "translation": "दाउ",
+                "definition": [
+                    [
+                        "A warm-blooded egg-laying vertebrate animal distinguished by feathers, wings, and a beak, typically able to fly."
+                    ],
+                    ["मोनसे गुदुं थै गोनां दावदै होग्रा भार्टिब्रेट जुनार जाय गां, गां आरो मासे बिखुंजों फाराग खालामजायो, जाय सरासनस्रायै बिरनो हायो।"]
+                ],
+                "synonym": [
+                    [
+                        "sparrow",
+                        "eagle",
+                        "crow",
+                        "parrot",
+                        "pigeon"
+                    ],
+                    ["गौरैया",
+                    "गोरख",
+                    "दावखा",
+                    "बाट'",
+                    "फारौ"]
+                ],
+                "antonym": [
+                    [],
+                    []
+                ],
+                "examples": [
+                    [
+                        "The bird flew across the sky."
+                    ],
+                    ["दाउआ अख्रां बारनानै बिरलांदोंमोन।"]
+                ],
+                "usage": [
+                    [
+                        "The bird flew across the sky."
+                    ],
+                    ["दाउआ अख्रां बारनानै बिरलांदोंमोन।"]
+                ],
+                "audio": [
+                    [],
+                    []
+                ]
+            },
+            "author": "BitMindAI"
+        }
+    }
+}
+                        </code>
+                    </div>
+                    The response could have any one or more than one of the eight-parts-of-speech.
+                    Which are Noun, Pronoun, Verb, Adjective, Adverb, Preposition, Conjunction, Interjection.
+                </p>
+
+                <p>This is an incomplete blog!!!</p>
+                <p>Please contact bitmindofficial@gmail.com, we are ever ready to respond to your service within 24 Hours 😊</p>
+
+
+
+            </div>
+            <div class="blog-footer">
+
+            </div>
+        </article>             
+
+        <footer>
+            <div class="bottom">
+                <div class="footerContent">
+                    <div class="content">
+                        <h4>Contacts</h4>
+                        <p>bitmindofficial@gmail.com</p>
+                        <p>mrlwitwmabusiness@gmail.com</p>
+                    </div>
+
+                    <div class="content">
+                        <h4>Polices</h4>
+                        <p>
+                            <a href="/policies/privacy-policy/">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a href="/policies/terms-of-usage/">Terms of Service</a>
+                        </p>
+                    </div>
+
+                    <div class="content">
+                        <h4>Company</h4>
+                        <p>
+                            <a href="/about-us/">About Us</a>
+                        </p>
+                        <p>
+                            <a href="/team/">Our Team</a>
+                        </p>
+                    </div>
+                </div>
+                <span>©BitMindAI 2025</span>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

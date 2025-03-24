@@ -138,7 +138,7 @@ main section h2{
 main section img{
     width: 100%;
 }
-main section a{
+main > section > a{
     text-decoration: underline;
 }
 

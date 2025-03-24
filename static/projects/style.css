@@ -1,0 +1,26 @@
+main h2, h5{
+    line-height: 0px;
+}
+main > .project{
+    border-radius: 10px;
+    border: 1px solid grey;
+    transition: all 0.3s;
+    margin-top: 50px;
+    padding: 20px 20px;
+}
+.project div{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.project a{
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+.project a:hover{
+    background: white;
+    color: black;
+    border: 1px solid grey;
+}

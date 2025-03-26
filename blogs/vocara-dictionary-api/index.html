@@ -186,18 +186,39 @@
                     The response could have any one or more than one of the eight-parts-of-speech.
                     Which are Noun, Pronoun, Verb, Adjective, Adverb, Preposition, Conjunction, Interjection.
                 </p>
-
-                <p>This is an incomplete blog!!!</p>
-                <p>Please contact bitmindofficial@gmail.com, we are ever ready to respond to your service within 24 Hours 😊</p>
-
-
-
+                <p>
+                    
+                </p>
+                <p>
+                    The getWord() function which is with the js returns a data. To use the program you can do.
+                </p>
+                <div class="codeBox">
+                    <code>
+data = getWord()
+word = data.word
+dictionary_data = data.data
+                    </code>
+                </div>
+                Now to get data of a specific part of speech lets take for example noun
+                <div class="codeBox">
+                    <code>
+translation = data.data.noun.translation
+definition = data.data.noun.definition[0]
+synonym = data.data.noun.synonym[0]
+antonym = data.data.noun.antonym[0]
+example = data.data.noun.examples[0]
+usage = data.data.noun.usage[0]
+                    </code>
+                </div>
+                <p>
+                    If you look into the code can see me giving index in all except translation. As translation is a string and all the others are a list of list of strings or list[list[str]]
+                </p>
+                <p>If you have any more issue. Please contact bitmindofficial@gmail.com, we are ever ready to respond to your service within 24 Hours 😊</p>
             </div>
             <div class="blog-footer">
 
             </div>
-        </article>             
-
+        </article>
         <footer>
             <div class="bottom">
                 <div class="footerContent">

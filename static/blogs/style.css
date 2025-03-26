@@ -1,5 +1,5 @@
 main h2, h5{
-    line-height: 0px;
+    margin: 0;
 }
 main > a{
     padding: 10px 20px;

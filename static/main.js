@@ -35,6 +35,30 @@ document.addEventListener('DOMContentLoaded', ()=>{
     handleResize();
     // Run on window resize
     window.addEventListener('resize', handleResize);
+
+
+
+    document.getElementsByClassName('footerContent')[0].innerHTML += `
+        <div class="content">
+            <h4>Social</h4>
+            <p>
+                <a href="https://instagram.com/bitmindai" target="_blank">
+                    <i class="fab fa-instagram"></i> @bitmindai
+                </a>
+            </p>
+            <p>
+                <a href="https://twitter.com/bitmindofficial" target="_blank">
+                    <i class="fab fa-x-twitter"></i> @bitmindofficial
+                </a>
+            </p>
+            <p>
+                <a href="https://youtube.com/@bitmindai" target="_blank">
+                    <i class="fab fa-youtube"></i> @bitmindai
+                </a>
+            </p>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    `;
 })
 
 
